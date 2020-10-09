@@ -16,7 +16,7 @@ RUN apk --no-cache add \
 # Do the installation
 RUN mkdir -p /var/www/localhost/htdocs && \
     apk --no-cache add -t .install curl && \
-    curl -sL https://github.com/phpipam/phpipam/archive/${PHPIPAM_VER}.tar.gz | \
+    curl -sL https://github.com/phpipam/phpipam/archive/v${PHPIPAM_VER}.tar.gz | \
     tar xzf - -C /var/www/localhost/htdocs --strip-components=1 && \
     apk --no-cache del .install && \
     ln -s config.docker.php /var/www/localhost/htdocs/config.php && \
