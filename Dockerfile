@@ -1,4 +1,4 @@
-FROM alpine:3.11 AS base
+FROM alpine:3.12 AS base
 
 LABEL maintainer="Richard Kojedzinszky <richard@kojedz.in>"
 
