@@ -9,7 +9,7 @@ RUN adduser -h /var/www -s /sbin/nologin -u 8080 -D -H apache
 
 # Install common packages
 RUN apk --no-cache add \
-    tzdata php-session php-sockets php-gmp php-json php-gettext php-mbstring \
+    tzdata php-session php-sockets php-gmp php-json php-gettext php-mbstring php-dom \
     php-gd php-iconv php-ctype php-curl php-pear php-pdo_mysql php-openssl \
     php-simplexml php-opcache php-pcntl php-posix php-snmp iputils fping
 
