@@ -2,7 +2,7 @@ FROM alpine:3.15 AS base
 
 LABEL maintainer="Richard Kojedzinszky <richard@kojedz.in>"
 
-ENV PHPIPAM_VER 1.4.1
+ENV PHPIPAM_VER 1.4.5
 
 # Pre-create apache to have constant uid
 RUN adduser -h /var/www -s /sbin/nologin -u 8080 -D -H apache
