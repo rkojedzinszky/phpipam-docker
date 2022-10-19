@@ -2,7 +2,7 @@ FROM ghcr.io/rkojedzinszky/webhost-images/php7 AS base
 
 LABEL maintainer="Richard Kojedzinszky <richard@kojedz.in>"
 
-ENV PHPIPAM_VER 1.4.7
+ENV PHPIPAM_VER 1.5.0
 
 USER 0
 
