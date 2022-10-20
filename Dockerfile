@@ -12,9 +12,9 @@ RUN apk --no-cache add \
 
 # Do the installation
 RUN mkdir -p /var/www/html && \
-    apk --no-cache add -t .install curl && \
+    apk --no-cache add -t .install curl tar && \
     curl -sL https://github.com/phpipam/phpipam/archive/v${PHPIPAM_VER}.tar.gz | \
-    tar xzf - -C /var/www/html --strip-components=1 && \
+    tar xzf - -C /var/www/html --strip-components=1 --no-same-permissions && \
     apk --no-cache del .install && \
     ln -s config.docker.php /var/www/html/config.php && \
     echo "getenv('IPAM_TIMEZONE') ? date_default_timezone_set(getenv('IPAM_TIMEZONE')) : false;" >> /var/www/html/config.php && \
